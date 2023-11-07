@@ -18,4 +18,4 @@ tasks:
 
   bs:
     cmds:
-      - cargo run -p tutor-nodb --bin basic-server
+      - cargo run -p tutor-nodb
