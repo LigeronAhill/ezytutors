@@ -10,7 +10,7 @@ mod routes;
 #[path = "../state.rs"]
 mod state;
 
-use routes::general_routes;
+use routes::{course_routes, general_routes};
 use state::AppState;
 
 #[actix_rt::main]
@@ -24,7 +24,8 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .app_data(shared_data.clone())
             .configure(general_routes)
+            .configure(course_routes)
     };
 
-    HttpServer::new(app).bind("127.0.0.1:3000")?.run().await
+    HttpServer::new(app).bind("127.0.0.1:8000")?.run().await
 }
