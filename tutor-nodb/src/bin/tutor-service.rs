@@ -27,5 +27,5 @@ async fn main() -> std::io::Result<()> {
             .configure(course_routes)
     };
 
-    HttpServer::new(app).bind("127.0.0.1:8000")?.run().await
+    HttpServer::new(app).bind("127.0.0.1:3000")?.run().await
 }

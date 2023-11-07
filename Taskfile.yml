@@ -16,6 +16,6 @@ tasks:
       - cargo test
       - cargo tarpaulin --ignore-tests
 
-  bs:
+  run:
     cmds:
       - cargo run -p tutor-nodb
